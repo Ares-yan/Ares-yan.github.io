@@ -33,7 +33,7 @@
 <section class="cover">
     
       
-      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+      <a class="forkMe" href="https://github.com/Ares-yan"
         target="_blank"><img width="149" height="149" src="/images/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     
@@ -69,7 +69,7 @@
     
     
     
-    <article id="post-hello-world" class="article article-type-post" itemscope
+    <article id="post-java 配置短信平台（阿里云短信）" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -77,8 +77,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/03/13/hello-world/"
-    >Hello World</a
+  <a class="article-title" href="/2020/03/13/java%20%E9%85%8D%E7%BD%AE%E7%9F%AD%E4%BF%A1%E5%B9%B3%E5%8F%B0%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E7%9F%AD%E4%BF%A1%EF%BC%89/"
+    >java 配置短信平台（阿里云短信）</a
   >
 </h2>
   
@@ -88,8 +88,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/13/hello-world/" class="article-date">
-  <time datetime="2020-03-13T07:22:00.794Z" itemprop="datePublished">2020-03-13</time>
+      <a href="/2020/03/13/java%20%E9%85%8D%E7%BD%AE%E7%9F%AD%E4%BF%A1%E5%B9%B3%E5%8F%B0%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E7%9F%AD%E4%BF%A1%EF%BC%89/" class="article-date">
+  <time datetime="2020-03-13T11:48:24.651Z" itemprop="datePublished">2020-03-13</time>
 </a>
       
       
@@ -108,20 +108,27 @@
       
 
       
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+      <h2 id="java-配置短信平台（阿里云短信）"><a href="#java-配置短信平台（阿里云短信）" class="headerlink" title="java 配置短信平台（阿里云短信）"></a>java 配置短信平台（阿里云短信）</h2><h3 id="注册阿里云短信平台"><a href="#注册阿里云短信平台" class="headerlink" title="注册阿里云短信平台"></a>注册阿里云短信平台</h3><ul>
+<li><p>地址：<a href="https://dysms.console.aliyun.com/dysms.htm#/overview" target="_blank" rel="noopener">https://dysms.console.aliyun.com/dysms.htm#/overview</a> </p>
+</li>
+<li><p>添加短信签名： </p>
+<p><img src="/images/add.png" alt="D74BD39F-E229-48E7-92A3-1F70045AC226"></p>
+</li>
+<li><p>添加短信模板 </p>
+<p><img src="/images/addTemplete.png" alt="57360489-2196-4F2D-A2EA-48C3E6AC5DFE"></p>
+</li>
+<li><p>申请accesskeys </p>
+<p><img src="/images/accessKeys.png" alt="09A7F46B-0CBB-462A-BD90-03E17C39E51D"></p>
+</li>
+</ul>
+<ul>
+<li><p>保存key的信息 </p>
+<p><img src="/images/secret.png" alt="CF80BD8E-2F03-402F-A128-8C99DCBB25BA"></p>
+</li>
+</ul>
+<h3 id="发送短信示例模板（java）"><a href="#发送短信示例模板（java）" class="headerlink" title="发送短信示例模板（java）"></a>发送短信示例模板（java）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.aliyuncs.CommonRequest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.CommonResponse;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.DefaultAcsClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.IAcsClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.exceptions.ClientException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.exceptions.ServerException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.http.MethodType;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.aliyuncs.profile.DefaultProfile;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">pom.xml </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&lt;dependency&gt; </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&lt;groupId&gt;com.aliyun&lt;/groupId&gt; </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt; </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&lt;version&gt;4.0.3&lt;/version&gt; </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&lt;/dependency&gt; </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SendSms</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendSms</span><span class="params">(String phoneNumbers)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		DefaultProfile profile = DefaultProfile.getProfile(<span class="string">"default"</span>, <span class="string">"&lt;accessKeyId&gt;"</span>, <span class="string">"&lt;accessSecret&gt;"</span>);</span><br><span class="line"></span><br><span class="line">		IAcsClient client = <span class="keyword">new</span> DefaultAcsClient(profile);</span><br><span class="line"></span><br><span class="line">		CommonRequest request = <span class="keyword">new</span> CommonRequest();</span><br><span class="line"></span><br><span class="line">		request.setMethod(MethodType.POST);</span><br><span class="line"></span><br><span class="line">		request.setDomain(<span class="string">"dysmsapi.aliyuncs.com"</span>);</span><br><span class="line"></span><br><span class="line">		request.setVersion(<span class="string">"2017-05-25"</span>);</span><br><span class="line"></span><br><span class="line">		request.setAction(<span class="string">"SendSms"</span>);</span><br><span class="line"></span><br><span class="line">		request.putQueryParameter(<span class="string">"PhoneNumbers"</span>, <span class="string">"电话号码"</span>);</span><br><span class="line"></span><br><span class="line">		request.putQueryParameter(<span class="string">"SignName"</span>, <span class="string">"签名"</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 验证码json </span></span><br><span class="line"></span><br><span class="line">		request.putQueryParameter(<span class="string">"TemplateParam"</span>, <span class="string">"&#123;\"code\":657623&#125;"</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">			CommonResponse response = client.getCommonResponse(request);</span><br><span class="line"></span><br><span class="line">			System.out.println(response.getData());</span><br><span class="line"></span><br><span class="line">		&#125; <span class="keyword">catch</span> (ServerException e) &#123;</span><br><span class="line"></span><br><span class="line">			e.printStackTrace();</span><br><span class="line"></span><br><span class="line">		&#125; <span class="keyword">catch</span> (ClientException e) &#123;</span><br><span class="line"></span><br><span class="line">			e.printStackTrace();</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<h3 id="调用发送短信功能"><a href="#调用发送短信功能" class="headerlink" title="调用发送短信功能"></a>调用发送短信功能</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendSms</span><span class="params">(String phone)</span></span>&#123; </span><br><span class="line"></span><br><span class="line">SendSms sms = <span class="keyword">new</span> SendSms(); </span><br><span class="line"></span><br><span class="line">sms.SendSms(phone); </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
       <!-- reward -->
       
@@ -160,8 +167,8 @@
     <ul class="list-inline">
       <li>
         &copy;
-        2015-2020
-        John Doe
+        2020
+        Ares-yan
       </li>
       <li>
         
@@ -185,8 +192,6 @@
       
       <li>
         <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
         
       </li>
     </ul>
@@ -217,23 +222,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/2019/about">关于我</a>
+      <a class="nav-item-link" href="/2020/about">关于我</a>
     </li>
     
   </ul>
